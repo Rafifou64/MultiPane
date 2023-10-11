@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailController">
+   <children>
+      <ImageView id="imgVelo" fitHeight="281.0" fitWidth="362.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@photo/veloRouteBleu.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="436.0" layoutY="24.0" text="Taille" />
+      <ChoiceBox fx:id="tailleBox" layoutX="436.0" layoutY="49.0" prefWidth="150.0" />
+      <Label layoutX="436.0" layoutY="103.0" text="Couleur" />
+      <ChoiceBox fx:id="couleurBox" layoutX="436.0" layoutY="130.0" prefWidth="150.0" />
+      <Label fx:id="prix" layoutX="14.0" layoutY="315.0" text="Prix :" />
+      <Label layoutX="436.0" layoutY="192.0" text="Marque" />
+      <ChoiceBox fx:id="marqueBox" layoutX="436.0" layoutY="214.0" prefWidth="150.0" />
+   </children>
+</Pane>
