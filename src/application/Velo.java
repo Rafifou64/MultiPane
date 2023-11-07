@@ -27,4 +27,19 @@ public class Velo {
 
 		return prixRes;
 	}
+	
+	String getURLPhoto()
+	{
+		String lienPhoto = null;
+		for (Option option: this.lstOption)
+		{
+			if(option instanceof Couleur)
+			{
+				lienPhoto = ((Couleur) option).getLienPhoto();
+				System.out.println("getURLPhoto "+lienPhoto);
+			}
+		}
+		System.out.println("getURLPhoto "+lienPhoto);		
+		return lienPhoto;
+	}
 }

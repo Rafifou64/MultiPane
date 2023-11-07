@@ -11,4 +11,9 @@ public class Couleur extends Option{
 		this.lienPhoto = lienPhoto;
 		this.couleurRGB = couleurRGB;		
 	}
+	
+	String getLienPhoto()
+	{
+		return lienPhoto;
+	}
 }

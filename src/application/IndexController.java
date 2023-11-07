@@ -21,19 +21,46 @@ public class IndexController {
 	
 	public void changePageRoute(MouseEvent e) throws IOException
 	{
-		Parent routeFXML = FXMLLoader.load(getClass().getResource("route.fxml"));
+		FXMLLoader loader = new FXMLLoader(
+		    getClass().getResource(
+		      "route.fxml"
+		    )
+		  );
+		
+		Parent routeFXML = loader.load();
 		Scene sceneRouteFXML = new Scene(routeFXML);
 		
 		Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
 		
 		stage.setScene(sceneRouteFXML);
+		
+		DetailController detailController = loader.getController();
+		
+		detailController.initValue("route");
 
 		stage.show();
 	}
 	
-	public void changePageVille()
+	public void changePageVille(MouseEvent e) throws IOException
 	{
-		
+		FXMLLoader loader = new FXMLLoader(
+			    getClass().getResource(
+			      "route.fxml"
+			    )
+			  );
+			
+			Parent routeFXML = loader.load();
+			Scene sceneRouteFXML = new Scene(routeFXML);
+			
+			Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+			
+			stage.setScene(sceneRouteFXML);
+			
+			DetailController detailController = loader.getController();
+			
+			detailController.initValue("ville");
+
+			stage.show();
 	}
 
 }
